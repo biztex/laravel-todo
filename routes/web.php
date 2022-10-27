@@ -21,3 +21,5 @@ Route::get('/', [
 Route::post('validate-exits', [
     BlogController::class, 'store'
 ])->name('validate.exists');
+
+Route::view('/generate-slug', 'livewire.welcome');
