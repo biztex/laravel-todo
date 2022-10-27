@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,15 +16,3 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
-/*
-|------------------------------------------------
-| API Routes
-|------------------------------------------------
-*/
-
-
-Route::get('/my-form', [ProductController::class, 'ipv6form']) ;
-Route::post('/submit-form', [ProductController::class, 'validateForm'])->name('validate.ip');
