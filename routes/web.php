@@ -15,14 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [
-    BlogController::class, 'index'
-]);
+// Route::get('/', [
+//     BlogController::class, 'index'
+// ]);
 
-Route::post('validate-exits', [
-    BlogController::class, 'store'
-])->name('validate.exists');
+// Route::post('validate-exits', [
+//     BlogController::class, 'store'
+// ])->name('validate.exists');
 
-Route::view('/generate-slug', 'livewire.welcome');
+// Route::view('/generate-slug', 'livewire.welcome');
 
-Route::get('/post', [PostController::class, 'index']);
+// Route::get('/post', [PostController::class, 'index']);
+
+
+Route::get('/show-post', [PostController::class, 'index']);
+Route::post('/create-post', [PostController::class, 'store']);
